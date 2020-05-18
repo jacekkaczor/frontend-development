@@ -1,0 +1,26 @@
+<h1 class="display-4">Telephone Directory</h1>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Phone number</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <% telephones.forEach(function(item){ %>
+            <tr>
+                <td><%= item.id %></td>
+                <td><%= item.name %></td>
+                <td><%= item.number %></td>
+                <td>
+                    <a href="/telephones/edit/<%= item.id %>" class="btn btn-primary">Edit</a>
+                    <form class="d-inline" action="/telephones/delete/<%= item.id %>" method="post">
+                        <input type="submit" value="Delete" class="btn btn-danger">
+                    </form>
+                </td>
+            </tr>
+        <% }) %>
+    </tbody>
+</table>

@@ -1,0 +1,16 @@
+<ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/telephones/list">Telephone Directory</a></li>
+    <li class="breadcrumb-item active">Edit</li>
+</ol>
+<h1 class="display-4">Edit Telephone Number</h1>
+<form method="post" action="/telephones/update/<%= telephone.id %>">
+    <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" name="name" class="form-control" value="<%= telephone.name %>">
+    </div>
+    <div class="form-group">
+        <label for="number">Phone Number</label>
+        <input type="number" name="number" class="form-control" value="<%= telephone.number %>">
+    </div>
+    <input type="submit" value="Submit" class="btn btn-primary">
+</form>
